@@ -1,6 +1,6 @@
  # Customer Manangement System Backend Api's 
  
-  Apis are developed using Java Spring Web ,Spring Boot, Maven ,JPA and Hibernate(H2) using Embedded Apache tomcat for   server environment and tested with postman. 
+  Apis are developed using Java Spring Web ,Spring Boot, Maven ,JPA based ORM via Hibernate(H2) using Embedded Apache   tomcat for server environment and tested with postman. 
 
  Rest API's --->> Endpoints : 
 
