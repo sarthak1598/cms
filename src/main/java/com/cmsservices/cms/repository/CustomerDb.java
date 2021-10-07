@@ -4,7 +4,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.cmsservices.cms.cmsentity.Customermodel;
 
-// An interface extending the methods of jparepository interface for crud operations
+// An interface inheriting the methods of jparepository interface for jpa based crud operations
 
 public interface CustomerDb extends JpaRepository<Customermodel , Long> {
 	
