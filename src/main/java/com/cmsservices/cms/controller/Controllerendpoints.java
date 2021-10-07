@@ -30,30 +30,48 @@ public class Controllerendpoints {
 	  
 	
 	  @PostMapping(value = "/addcustomer")
-	  public Customermodel addcustomer(@RequestBody Customermodel customer) {
-	        return customerservice.addCustomer(customer);
+	  public ResponseEntity<Customermodel> addcustomer(@RequestBody Customermodel customer) {
+		  try {
+			  
+	         customerservice.addCustomer(customer); 
+	         return new ResponseEntity<>(customer, HttpStatus.CREATED) ;
+		  } 
+		  
+		  catch (Exception e) {
+			  return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR) ;
+		  }
+		  
 	    }
 
 	  @GetMapping("/getcustomers")
-	    public List<Customermodel> getcustomers() {
+	    public ResponseEntity<List<Customermodel>> getcustomers() {
+		  try {
+			  
 		    List<Customermodel> customers = customerservice.getCustomers();
-		    // returns the list of customers stored in hiberanate db 
-		    return customers;
+		    return new ResponseEntity<>(customers , HttpStatus.OK) ;
+		    // returns the list of customers stored in hiberanate db
+		  }
+		   catch (Exception e ) {
+			   return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR) ; 
+		   }
+		  
 	    }
 	  
 	  
 	  @PutMapping("/updatecustomer/{id}")
 	  public ResponseEntity<HttpStatus> modifycustomer( @PathVariable("id") long id , @RequestBody Customermodel customermodel ) {
 		  // api to update the details of particulat customer specified by id 
-		
+		  try {
 			if (customerservice.updatecustomer(id, customermodel) == true) {
 
 				return new ResponseEntity<>(HttpStatus.CREATED);
 				
 			} 
-			else {
+		  }
+			catch (Exception e) {
 				return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
 			} 
+		  return null;
 	  }
 	  
 	  @DeleteMapping("/removecustomer/{id}")
