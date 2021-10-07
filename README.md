@@ -1,9 +1,9 @@
-# Customer Manangement System-- Backend Api's using : 
+ Customer Manangement System-- Backend Api's using : 
  
-# Java Spring Web ,Spring Boot, Maven ,JPA and Hibernate(H2) using Embedded Apache tomcat for server environment and
+ Java Spring Web ,Spring Boot, Maven ,JPA and Hibernate(H2) using Embedded Apache tomcat for server environment and
   postman for testing the Api endpoints . 
 
-# Rest API's --->>> Endpoints : 
+ Rest API's --->>> Endpoints : 
 
 1.) To retrieve the details of the customers stored in h2 database . 
     GET : localhost:8080/customerapis/getcustomers
@@ -18,6 +18,6 @@
     DELETE : localhost:8080/customerapis/deletecustomer/{id} --->> id(int) of customer to be passed who is to be removed from Db.   
 
 
-# Tomcat port listening on : 8080
+ Tomcat default port listening on : 8080
 
 
