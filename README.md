@@ -8,13 +8,16 @@
     GET : localhost:8080/customerapis/getcustomers
 
 2.) To save the details of new customer in the Db.  
+
     POST : localhost:8080/customerapis/addcustomer
     
-3.) To update the details of the customer already present in Db. 
-    PUT : localhost:8080/customerapis/updatecustomer/{id} -->id(int) of customer to be passed with updated JSON requestbody.
+3.) To update the details of the customer already present in Db.
+
+    PUT : localhost:8080/customerapis/updatecustomer/{id} -->id(int) of customer to be passed with updated JSON                 requestbody.
     
 4.) To remove the details of the customer from Db.  
-    DELETE : localhost:8080/customerapis/deletecustomer/{id} --->> id(int) of customer to be passed who is to be removed from Db.   
+
+    DELETE : localhost:8080/customerapis/deletecustomer/{id} --->> id(int) of customer to be passed who is to be                    removed from Db.   
 
 
  Tomcat default port listening on : 8080
