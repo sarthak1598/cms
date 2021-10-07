@@ -4,7 +4,8 @@
 
  Rest API's --->> Endpoints : 
 
-1.) To retrieve the details of the customers stored in h2 database . 
+1.) To retrieve the details of the customers stored in Db.
+
     GET : localhost:8080/customerapis/getcustomers
 
 2.) To save the details of new customer in the Db.  
